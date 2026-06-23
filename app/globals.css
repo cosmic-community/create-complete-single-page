@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #06000f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .drip-text {
+    background: linear-gradient(90deg, #ff2fd6, #a020f0, #22e6ff, #ff2fd6);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 8s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 47, 214, 0.4);
+  }
+
+  .neon-border {
+    border: 2px solid #ff2fd6;
+    box-shadow: 0 0 18px rgba(255, 47, 214, 0.6), inset 0 0 18px rgba(160, 32, 240, 0.3);
+  }
+
+  .neon-btn {
+    box-shadow: 0 0 18px rgba(255, 47, 214, 0.7), 0 0 40px rgba(34, 230, 255, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .neon-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 0 30px rgba(255, 47, 214, 0.9), 0 0 60px rgba(34, 230, 255, 0.6);
+  }
+}
